@@ -71,7 +71,9 @@ const Feature = ({ icon: Icon, title, desc }: any) => (
 
 const Stat = ({ value, label }: any) => (
   <div className="rounded-2xl border border-gray-200 bg-white p-5">
-    <div className="text-2xl font-semibold tracking-tight text-gray-800">{value}</div>
+    <div className="text-2xl font-semibold tracking-tight text-gray-800">
+      {value}
+    </div>
     <div className="text-sm text-muted-foreground">{label}</div>
   </div>
 );
@@ -176,11 +178,7 @@ const PortfolioCard = ({
 }) => (
   <Card className="rounded-2xl bg-white border-gray-200 overflow-hidden">
     <CardContent className="p-0">
-      <img
-        src={image}
-        alt={title}
-        className="w-full h-60 object-cover"
-      />
+      <img src={image} alt={title} className="w-full h-60 object-cover" />
       <div className="p-4">
         <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
         <p className="text-sm text-muted-foreground">{category}</p>
@@ -282,7 +280,7 @@ export default function AgencyLandingPage() {
             {nav.map((n) => (
               <Button
                 key={n.id}
-                variant={activeSection === n.id ? "secondary" : "ghost"}
+                variant={activeSection === n.id ? "outline" : "ghost"}
                 className="rounded-2xl"
                 onClick={() => scrollToId(n.id)}
               >
@@ -306,11 +304,7 @@ export default function AgencyLandingPage() {
               onClick={() => setMobileOpen((v) => !v)}
               aria-label="Abrir menú"
             >
-              {mobileOpen ? (
-                <X className="h-5 w-5" />
-              ) : (
-                <Menu className="h-5 w-5" />
-              )}
+              {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </Button>
           </div>
         </div>
@@ -328,7 +322,7 @@ export default function AgencyLandingPage() {
                 {nav.map((n) => (
                   <Button
                     key={n.id}
-                    variant={activeSection === n.id ? "secondary" : "ghost"}
+                    variant={activeSection === n.id ? "outline" : "ghost"}
                     className="justify-start rounded-2xl"
                     onClick={() => {
                       setMobileOpen(false);
@@ -427,13 +421,30 @@ export default function AgencyLandingPage() {
         </div>
       </section>
 
-      <Section id="servicios" title="Todo lo que tu empresa necesita para destacar" kicker="Propuestas claras, entregables concretos">
+      <Section
+        id="servicios"
+        title="Todo lo que tu empresa necesita para destacar"
+        kicker="Propuestas claras, entregables concretos"
+      >
         <div className="grid gap-5 md:grid-cols-3">
-          <Feature icon={Megaphone} title="Marketing & Performance" desc="Auditoría, estrategia, ads (Meta/Google), funnel, email marketing, analítica, CRO y reportes accionables." />
-          <Feature icon={Code2} title="Desarrollo Web Completo" desc="Landing pages, sitios corporativos, e-commerce, integraciones, automatizaciones, SEO técnico y optimización de velocidad." />
-          <Feature icon={Brush} title="Branding & Diseño" desc="Con diseñadora dedicada: logo, identidad visual, brand book ligero, piezas para redes, presentaciones y plantillas." />
+          <Feature
+            icon={Megaphone}
+            title="Marketing & Performance"
+            desc="Auditoría, estrategia, ads (Meta/Google), funnel, email marketing, analítica, CRO y reportes accionables."
+          />
+          <Feature
+            icon={Code2}
+            title="Desarrollo Web Completo"
+            desc="Landing pages, sitios corporativos, e-commerce, integraciones, automatizaciones, SEO técnico y optimización de velocidad."
+          />
+          <Feature
+            icon={Brush}
+            title="Branding & Diseño"
+            desc="Con diseñadora dedicada: logo, identidad visual, brand book ligero, piezas para redes, presentaciones y plantillas."
+          />
         </div>
       </Section>
+
       <Section id="proceso" title="Nuestro Proceso" kicker="Un camino claro hacia el éxito">
         <div className="grid gap-8 md:grid-cols-2">
           <ProcessStep
@@ -478,20 +489,33 @@ export default function AgencyLandingPage() {
           />
         </div>
       </Section>
+
       <Section id="planes" title="Planes para empezar" kicker="Elige un punto de partida">
         <div className="grid gap-5 md:grid-cols-3">
           <PricingCard
             name="Starter"
             price="$9,900"
             desc="Para validar oferta y captar leads."
-            items={["Landing 1 página (secciones clave)", "SEO base + analítica", "1 campaña inicial (Meta o Google)", "Plantillas de diseño (5 piezas)", "Reporte quincenal"]}
+            items={[
+              "Landing 1 página (secciones clave)",
+              "SEO base + analítica",
+              "1 campaña inicial (Meta o Google)",
+              "Plantillas de diseño (5 piezas)",
+              "Reporte quincenal",
+            ]}
             cta="Empezar"
           />
           <PricingCard
             name="Growth"
             price="$18,900"
             desc="Escalar con sistema completo."
-            items={["Sitio multi-sección (hasta 6)", "Optimización de conversión (CRO) básica", "2–3 campañas + pruebas A/B", "Branding (logo + mini brand book)", "Reporte semanal + optimización"]}
+            items={[
+              "Sitio multi-sección (hasta 6)",
+              "Optimización de conversión (CRO) básica",
+              "2–3 campañas + pruebas A/B",
+              "Branding (logo + mini brand book)",
+              "Reporte semanal + optimización",
+            ]}
             cta="Quiero Growth"
             highlight
           />
@@ -499,11 +523,18 @@ export default function AgencyLandingPage() {
             name="Scale"
             price="$34,900"
             desc="Para equipos que quieren velocidad y volumen."
-            items={["Sitio avanzado (blog / e-commerce / integraciones)", "Automatizaciones (CRM/email/WhatsApp)", "Gestión multi-campaña + creatividades", "Diseño mensual (12–20 piezas)", "Dashboard + reuniones semanales"]}
+            items={[
+              "Sitio avanzado (blog / e-commerce / integraciones)",
+              "Automatizaciones (CRM/email/WhatsApp)",
+              "Gestión multi-campaña + creatividades",
+              "Diseño mensual (12–20 piezas)",
+              "Dashboard + reuniones semanales",
+            ]}
             cta="Hablemos"
           />
         </div>
       </Section>
+
       <Section id="faq" title="Preguntas Frecuentes" kicker="Resolvemos tus dudas">
         <div className="grid gap-4 md:grid-cols-2">
           <FAQItem
@@ -524,6 +555,7 @@ export default function AgencyLandingPage() {
           />
         </div>
       </Section>
+
       <Section id="contacto" title="Hablemos de tu proyecto" kicker="Cotización rápida">
         <div className="grid gap-6 md:grid-cols-2">
           <Card className="rounded-2xl bg-white border-gray-200">
@@ -618,6 +650,7 @@ export default function AgencyLandingPage() {
           </Card>
         </div>
       </Section>
+
       <footer className="border-t border-gray-200 bg-white">
         <div className="mx-auto max-w-6xl px-4 py-10">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -636,8 +669,7 @@ export default function AgencyLandingPage() {
           </div>
           <Separator className="my-8 border-gray-200" />
           <div className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Tu Agencia. Todos los derechos
-            reservados.
+            © {new Date().getFullYear()} Tu Agencia. Todos los derechos reservados.
           </div>
         </div>
       </footer>
