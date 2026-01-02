@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 252 82% 56%; /* Majestic Purple */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 336 78% 57%; /* Royal Fuchsia */
+  --secondary-foreground: 0 0% 100%;
+
+  --muted: 210 4% 80%; /* Silver */
+  --muted-foreground: 210 4% 31%; /* Deep Slate */
+}
+
+.text-muted-foreground { color: hsl(var(--muted-foreground)); }
