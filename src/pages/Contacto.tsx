@@ -12,7 +12,7 @@ import {
     MapPin,
   } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5215500000000";
+const WHATSAPP_NUMBER = "5215522068412";
 
 export default function Contacto() {
     const [searchParams] = useSearchParams();
@@ -96,7 +96,7 @@ export default function Contacto() {
                   </div>
                   <div>
                     <div className="text-muted-foreground">Email</div>
-                    <div className="font-medium">hola@auramarketing.com</div>
+                    <div className="font-medium">auramarketingstore@gmail.com</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -105,7 +105,7 @@ export default function Contacto() {
                   </div>
                   <div>
                     <div className="text-muted-foreground">WhatsApp</div>
-                    <div className="font-medium">+52 55 0000 0000</div>
+                    <div className="font-medium">+52 55 2206 8412</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">

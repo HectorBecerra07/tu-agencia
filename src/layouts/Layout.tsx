@@ -16,7 +16,7 @@ import {
   MessageCircle,
 } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5215500000000";
+const WHATSAPP_NUMBER = "5215522068412";
 const WHATSAPP_MESSAGE =
   "Hola Aura Marketing, quiero información sobre campañas y/o desarrollo web.";
 
