@@ -2,6 +2,7 @@ import { useSearchParams } from "react-router-dom";
 import { Card, CardContent } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
+import { Textarea } from "../components/ui/textarea";
 import { Section } from "./HomePage";
 import { ArrowRight } from "lucide-react";
 
@@ -23,10 +24,10 @@ export default function Cotizacion() {
                     <form
                         className="mt-6 grid gap-3"
                         onSubmit={(e) => {
-                        e.preventDefault();
-                        alert(
-                            `¡Gracias por comprar el plan ${plan}! (Demo) Recibirás un correo con los siguientes pasos.`
-                        );
+                            e.preventDefault();
+                            const subject = `Cotización para el Plan: ${plan}`;
+                            const body = "Hola, me gustaría solicitar una cotización para el plan y discutir mis necesidades. \n\nGracias.";
+                            window.location.href = `mailto:auramarketingstore@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                         }}
                     >
                         <div className="grid gap-3 sm:grid-cols-2">
@@ -46,29 +47,16 @@ export default function Cotizacion() {
                             required
                             className="rounded-2xl bg-white border-gray-200"
                         />
-                         <Input
-                            placeholder="Número de Tarjeta"
-                            required
+                        <Textarea
+                            placeholder="Cuéntanos un poco sobre tu proyecto (opcional)"
                             className="rounded-2xl bg-white border-gray-200"
                         />
-                        <div className="grid gap-3 sm:grid-cols-2">
-                            <Input
-                                placeholder="MM/AA"
-                                required
-                                className="rounded-2xl bg-white border-gray-200"
-                            />
-                            <Input
-                                placeholder="CVC"
-                                required
-                                className="rounded-2xl bg-white border-gray-200"
-                            />
-                        </div>
                         <Button
                             size="lg"
                             className="rounded-2xl bg-primary text-primary-foreground"
                             type="submit"
                         >
-                            Pagar
+                            Solicitar Cotización ahora
                             <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                     </form>
