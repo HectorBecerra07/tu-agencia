@@ -128,8 +128,8 @@ export default function Planes() {
                 "Experimentación A/B continua",
                 "Soporte prioritario",
                 ]}
-                cta="Hablar con Aura"
-                link="/contacto?plan=scale"
+                cta="Cotizar Scale"
+                link="/cotizacion?plan=scale"
             />
             </div>
         </Section>
