@@ -8,7 +8,7 @@ import Proceso from "./pages/Proceso";
 import Planes from "./pages/Planes";
 import Faq from "./pages/Faq";
 import Contacto from "./pages/Contacto";
-import Checkout from "./pages/Checkout";
+import Cotizacion from "./pages/Cotizacion";
 
 export default function App() {
   return (
@@ -23,7 +23,7 @@ export default function App() {
           <Route path="planes" element={<Planes />} />
           <Route path="faq" element={<Faq />} />
           <Route path="contacto" element={<Contacto />} />
-          <Route path="checkout" element={<Checkout />} />
+          <Route path="cotizacion" element={<Cotizacion />} />
         </Route>
       </Routes>
     </BrowserRouter>

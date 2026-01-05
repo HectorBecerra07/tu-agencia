@@ -100,7 +100,7 @@ export default function Planes() {
                 "Soporte por WhatsApp",
                 ]}
                 cta="Quiero Starter"
-                link="/checkout?plan=starter"
+                link="/cotizacion?plan=starter"
             />
             <PricingCard
                 name="Growth"
@@ -115,7 +115,7 @@ export default function Planes() {
                 ]}
                 cta="Quiero Growth"
                 highlight
-                link="/checkout?plan=growth"
+                link="/cotizacion?plan=growth"
             />
             <PricingCard
                 name="Scale"

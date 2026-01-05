@@ -5,12 +5,12 @@ import { Input } from "../components/ui/input";
 import { Section } from "./HomePage";
 import { ArrowRight } from "lucide-react";
 
-export default function Checkout() {
+export default function Cotizacion() {
     const [searchParams] = useSearchParams();
     const plan = searchParams.get("plan");
 
     return (
-        <Section id="checkout" title="Finalizar Compra" kicker={`Plan: ${plan}`}>
+        <Section id="cotizacion" title="Finalizar Cotización" kicker={`Plan: ${plan}`}>
             <Card className="rounded-2xl bg-white/90 backdrop-blur border-gray-200 shadow-sm">
                 <CardContent className="p-6">
                     <h3 className="text-xl font-semibold tracking-tight text-gray-800">
